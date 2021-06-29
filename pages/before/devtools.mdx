@@ -1,3 +1,59 @@
 # 개발자 도구
 
-> Chrome 브라우저의 개발자 도구 사용법을 간단히 알아봅니다.
+> 브라우저들에서는 보여주고 있는 페이지에서 오류를 찾고 해결할 수 있도록 개발자도구를 지원합니다.
+> <br/>그 중 Chrome 개발자 도구를 사용하는 법을 소개합니다.
+
+### 단축키
+
+- Windows: `F12`, `Ctrl` + `Shift` + `i`
+- Mac: `Command` + `Option` + `i`
+
+## Elements
+
+브라우저에 렌더링된 DOM과 CSS를 조작할 수 있습니다.
+<br/>Elements 탭 내에서 새로운 DOM을 추가하거나 제거할 수 있으며, Styles 영역에서 실시간으로 스타일편집이 가능합니다.
+
+1. Element를 추가, 제거, 수정합니다.
+2. Element의 스타일을 추가, 수정, 제거합니다.
+
+## Console
+
+페이지에서 사용되고있는 JS와 상호작용할 수 있으며, 원하는 정보를 볼 수 있습니다.
+
+```javascript
+var dummy = [ 
+  { id: 1, name: 'Samba', age: 28 },
+  { id: 2, name: 'Hello', age: 29 }
+]; 
+
+console.log(dummy);
+console.dir(dummy);
+console.table(dummy);
+```
+더 많은 기능들이 보고싶다면, [이 페이지](https://developer.chrome.com/docs/devtools/console/utilities/)를 참고합니다.
+
+## Sources
+
+페이지에서 사용되고있는 Resource 목록과 소스코드를 볼 수 있습니다.
+<br/>또한 Break Point를 사용하여 자바스크립트 디버깅도 가능합니다.
+
+### Break point
+
+JS파일의 Line을 클릭하여 Break Point를 추가할 수 있습니다. Break Point에서 멈춘 상태로 Console 사용도 가능합니다.
+<br/>또한 소스내에 `debugger`명령어를 사용하여 Break Point를 생성할 수 있습니다.
+
+```javascript
+var a = 3;
+var b = 5;
+
+debugger;
+
+console.log(c);
+var c = a + b;
+console.log(c);
+```
+
+## Network
+
+요청과 관련한 디버깅이 가능합니다.
+<br/>또한 요청결과에 대한 시간, 크기등을 볼 수 있어 성능확인도 가능합니다.
