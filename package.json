@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next -p 12000",
     "start": "next start",
-    "build": "next build && next export"
+    "build": "next build && next export",
+    "deploy": "next build && next export && aws s3 sync ./out s3://feclass --profile test-peer"
   },
   "author": "Samba Lim",
   "license": "MIT",
